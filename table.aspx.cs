@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace ShopProject
 {
-    public partial class Items : System.Web.UI.Page
+    public partial class table : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void TextBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
