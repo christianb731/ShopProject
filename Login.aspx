@@ -8,10 +8,24 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div style="background-image: url('ART/paint.JPG')">
             <asp:Login ID="Login1" runat="server" Height="254px" OnAuthenticate="Login1_Authenticate" Width="435px">
             </asp:Login>
             Login Page For Shop whick redirect to next Page If password is correct<br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
         </div>
     </form>
 </body>
