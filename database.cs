@@ -49,6 +49,7 @@ namespace ShopProject
 
             select.Connection = conn;
             select.Parameters.AddWithValue("@user", Username);
+            select.Parameters.AddWithValue("@pass", Password);
             adapter.SelectCommand = select;
             conn.Open();
 
