@@ -12,7 +12,7 @@
             <asp:Image ID="Image1" runat="server" Height="181px" Width="205px" BorderColor="Black" BorderStyle="Solid" ImageAlign="AbsMiddle" ImageUrl="~/Art/intimate.jpg" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;<asp:Image ID="Image2" runat="server" Height="181px" Width="215px" BorderColor="Black" BorderStyle="Solid" ImageAlign="AbsMiddle" ImageUrl="~/Art/Arlequin.jpg" />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Image ID="Image3" runat="server" Height="181px" Width="205px" BorderColor="Black" BorderStyle="Solid" ImageAlign="AbsMiddle" ImageUrl="~/Art/Arlequin.jpg" style="margin-left: 15px" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Image ID="Image3" runat="server" Height="181px" Width="205px" BorderColor="Black" BorderStyle="Solid" ImageAlign="AbsMiddle" ImageUrl="~/Art/OIP.jfif" style="margin-left: 15px" />
             <br />
             Picassso Art <br />
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -38,7 +38,10 @@
         <p>
             &nbsp;</p>
         <p>
-            &nbsp;</p>
+            <asp:Image ID="Image4" runat="server" Height="193px" Width="205px" BorderColor="Black" BorderStyle="Solid" ImageAlign="AbsMiddle" ImageUrl="~/Art/Mona-Lisa.jpg" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Image ID="Image5" runat="server" Height="193px" Width="215px" BorderColor="Black" BorderStyle="Solid" ImageAlign="AbsMiddle" ImageUrl="~/Art/PearlEarrin.png" style="margin-left: 5px" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Image ID="Image6" runat="server" Height="193px" Width="203px" BorderColor="Black" BorderStyle="Solid" ImageAlign="AbsMiddle" ImageUrl="~/Art/StarryNight.jpg" style="margin-left: 15px; margin-top: 0px;" />
+            </p>
     </form>
 </body>
 </html>

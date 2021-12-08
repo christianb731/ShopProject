@@ -67,6 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ART\Arlequin.jpg" />
+    <Content Include="ART\intimate.jpg" />
+    <Content Include="ART\Mona-Lisa.jpg" />
+    <Content Include="ART\OIP.jfif" />
+    <Content Include="ART\PearlEarrin.png" />
+    <Content Include="ART\StarryNight.jpg" />
     <Content Include="Items.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="table.aspx" />
@@ -107,7 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_LocalResources\" />
-    <Folder Include="ART\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
