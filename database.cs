@@ -15,7 +15,7 @@ namespace ShopProject
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
             SqlConnection conn = new SqlConnection(ConnectionString);
-            SqlCommand select = new SqlCommand("Select * from UserAccounts WHERE Username = @user");
+            SqlCommand select = new SqlCommand("Select * from Customer WHERE Username = @user");
             
             select.Connection = conn;
             select.Parameters.AddWithValue("@user", Username);
@@ -24,7 +24,7 @@ namespace ShopProject
 
             Random rand = new Random();
             int newID = rand.Next(1, 10000);
-            SqlCommand update = new SqlCommand("Insert into UserAccounts (Id, Username, Password) VALUES (@id, @user, @pass)");
+            SqlCommand update = new SqlCommand("Insert into Customer (Id, Username, Password) VALUES (@id, @user, @pass)");
             update.Parameters.AddWithValue("@id", newID);
             update.Parameters.AddWithValue("@user", Username);
             update.Parameters.AddWithValue("@pass", Password);
@@ -45,7 +45,7 @@ namespace ShopProject
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
             SqlConnection conn = new SqlConnection(ConnectionString);
-            SqlCommand select = new SqlCommand("Select * from UserAccounts WHERE Username = @user AND Password = @pass");
+            SqlCommand select = new SqlCommand("Select * from Customer WHERE Username = @user AND Password = @pass");
 
             select.Connection = conn;
             select.Parameters.AddWithValue("@user", Username);
