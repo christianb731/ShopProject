@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="ART\Arlequin.jpg" />
+    <Content Include="ART\artbackground\registrationBackground.jpg" />
     <Content Include="ART\intimate.jpg" />
     <Content Include="ART\Mona-Lisa.jpg" />
     <Content Include="ART\OIP.jfif" />
@@ -79,6 +80,7 @@
     <Content Include="Login.aspx" />
     <Content Include="table.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Register.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -110,6 +112,13 @@
     </Compile>
     <Compile Include="table.aspx.designer.cs">
       <DependentUpon>table.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
