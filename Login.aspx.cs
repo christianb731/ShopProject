@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using static ShopProject.DatabaseAccountAuthentication;
 
 namespace ShopProject
 {
@@ -16,7 +17,7 @@ namespace ShopProject
 
         protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
         {
-
+           e.Authenticated = Login(Login1.UserName,Login1.Password);
         }
     }
 }
