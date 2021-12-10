@@ -48,7 +48,7 @@
             <asp:Label ID="LabelName2" runat="server"  Text="Pablo Picasso (Spanish, Malaga 1881–1973 Mougins, France)" CssClass="description"></asp:Label>
       <br />
       <br />
-                        <asp:Button ID="Button5" runat="server" Text="Add to Cart" />
+                        <asp:Button ID="Button5" OnClick="Button5_Click" runat="server" Text="Add to Cart" />
       <br />
         </div>
   <div class="column">

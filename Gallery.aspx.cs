@@ -18,5 +18,9 @@ namespace ShopProject
         {
             Button1.BackColor = System.Drawing.Color.Blue;
         }
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Button5.BackColor = System.Drawing.Color.Blue;
+        }
     }
 }
