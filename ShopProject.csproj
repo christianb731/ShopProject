@@ -68,6 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="ART\aboutimgs\facebook.png" />
+    <Content Include="ART\aboutimgs\instagram.png" />
+    <Content Include="ART\aboutimgs\linked.png" />
+    <Content Include="ART\aboutimgs\twitter.png" />
     <Content Include="ART\Arlequin.jpg" />
     <Content Include="ART\artbackground\registrationBackground.jpg" />
     <Content Include="ART\intimate.jpg" />
