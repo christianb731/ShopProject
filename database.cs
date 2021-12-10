@@ -4,18 +4,23 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 using System.Data;
+using System.Text;
+
 namespace ShopProject
 {
     public class DatabaseAccountAuthentication
     {
         static string ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Metro\\Documents\\GitHub\\ShopProject\\DBShop.mdf;Integrated Security=True;Connect Timeout=30";
-        
+        public static string getConnectionString()
+        {
+            return ConnectionString;
+        }
 
         public static bool Register(string Username, string Password)
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
             SqlConnection conn = new SqlConnection(ConnectionString);
-            SqlCommand select = new SqlCommand("Select * from Customer WHERE Username = @user");
+            SqlCommand select = new SqlCommand("Select * from Customer WHERE Username = @user;");
             
             select.Connection = conn;
             select.Parameters.AddWithValue("@user", Username);
@@ -24,7 +29,7 @@ namespace ShopProject
 
             Random rand = new Random();
             int newID = rand.Next(1, 10000);
-            SqlCommand update = new SqlCommand("Insert into Customer (Id, Username, Password) VALUES (@id, @user, @pass)");
+            SqlCommand update = new SqlCommand("Insert into Customer (Id, Username, Password) VALUES (@id, @user, @pass);");
             update.Parameters.AddWithValue("@id", newID);
             update.Parameters.AddWithValue("@user", Username);
             update.Parameters.AddWithValue("@pass", Password);
@@ -45,7 +50,7 @@ namespace ShopProject
         {
             SqlDataAdapter adapter = new SqlDataAdapter();
             SqlConnection conn = new SqlConnection(ConnectionString);
-            SqlCommand select = new SqlCommand("Select * from Customer WHERE Username = @user AND Password = @pass");
+            SqlCommand select = new SqlCommand("Select * from Customer WHERE Username = @user AND Password = @pass;");
 
             select.Connection = conn;
             select.Parameters.AddWithValue("@user", Username);
@@ -63,4 +68,47 @@ namespace ShopProject
             return false;
         }
     }
+    public class DatabasePullItems 
+    {
+        static string ConnectionString = DatabaseAccountAuthentication.getConnectionString();
+        public static DataTable getSelectItems(List<string> items) //pass list of strings that match the names in the db
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlConnection conn = new SqlConnection(ConnectionString);
+            conn.Open();
+            var command = new StringBuilder("Select * from Items WHERE name = @name");
+            SqlCommand select = new SqlCommand();
+            select.Parameters.AddWithValue("@name", items[0]);
+            
+            for(int i = 1; i<items.Count; i++)
+            {
+                string newParam = "@name"+i.ToString();
+                command.Append(" OR name = "+newParam);
+                select.Parameters.AddWithValue(newParam, items[i]);
+            }
+            command.Append(";");
+            select.CommandText = command.ToString();
+            select.Connection = conn;
+            adapter.SelectCommand = select;
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            conn.Close();
+
+            return dt;
+        }
+        public static DataTable getAllItems()
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlConnection conn = new SqlConnection(ConnectionString);
+            conn.Open();
+            SqlCommand select = new SqlCommand("Select * from Items;");
+            select.Connection = conn;
+            adapter.SelectCommand = select;
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            conn.Close();
+
+            return dt;
+        }
+    } 
 }
