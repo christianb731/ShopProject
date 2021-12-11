@@ -81,6 +81,7 @@
     <Content Include="ART\PearlEarrin.png" />
     <Content Include="ART\StarryNight.jpg" />
     <Content Include="checkout.aspx" />
+    <Content Include="DBShop.mdf" />
     <Content Include="Gallery.aspx" />
     <Content Include="hd.aspx" />
     <Content Include="Login.aspx" />
@@ -167,6 +168,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="App_LocalResources\" />
   </ItemGroup>
   <PropertyGroup>

@@ -5,12 +5,12 @@ using System.Web;
 using System.Data.SqlClient;
 using System.Data;
 using System.Text;
-
+using System.Configuration;
 namespace ShopProject
 {
     public class DatabaseAccountAuthentication
     {
-        static string ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Metro\\Documents\\GitHub\\ShopProject\\DBShop.mdf;Integrated Security=True;Connect Timeout=30";
+        static string ConnectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
         public static string getConnectionString()
         {
             return ConnectionString;
@@ -29,7 +29,7 @@ namespace ShopProject
 
             Random rand = new Random();
             int newID = rand.Next(1, 10000);
-            SqlCommand update = new SqlCommand("Insert into Customer (Id, Username, Password) VALUES (@id, @user, @pass);");
+            SqlCommand update = new SqlCommand("Insert into Customer (Username, Password) VALUES (@user, @pass);");
             update.Parameters.AddWithValue("@id", newID);
             update.Parameters.AddWithValue("@user", Username);
             update.Parameters.AddWithValue("@pass", Password);

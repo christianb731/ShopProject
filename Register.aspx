@@ -28,7 +28,7 @@
         </div>
     </div>
 
-    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" BackColor="#F7F7DE" BorderColor="#CCCC99" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="10pt" style="text-align: left; margin-left: 600px; margin-top: 200px" OnCreatedUser="CreateUserWizard1_CreatedUser" >
+    <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" BackColor="#F7F7DE" BorderColor="#CCCC99" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="10pt" style="text-align: left; margin-left: 600px; margin-top: 200px" OnCreatedUser="CreateUserWizard1_CreatedUser" RequireEmail ="false" MembershipProvider="register">
         <ContinueButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284775" />
         <CreateUserButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284775" />
         <TitleTextStyle BackColor="#6B696B" Font-Bold="True" ForeColor="#FFFFFF" />
@@ -72,7 +72,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td align="center" colspan="2" style="color:Red;">
+                            <td align="center" colspan="2" style="color:Red;" class="auto-style5">
+                                <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
                                 <asp:Literal ID="ErrorMessage" runat="server" EnableViewState="False"></asp:Literal>
                             </td>
                         </tr>
