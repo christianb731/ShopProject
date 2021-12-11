@@ -28,9 +28,7 @@ namespace ShopProject
             conn.Open();
 
             Random rand = new Random();
-            int newID = rand.Next(1, 10000);
             SqlCommand update = new SqlCommand("Insert into Customer (Username, Password) VALUES (@user, @pass);");
-            update.Parameters.AddWithValue("@id", newID);
             update.Parameters.AddWithValue("@user", Username);
             update.Parameters.AddWithValue("@pass", Password);
             update.Connection = conn;
