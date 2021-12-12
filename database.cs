@@ -108,5 +108,15 @@ namespace ShopProject
 
             return dt;
         }
+        public decimal calculatePrice(DataTable table)
+        {
+            decimal totalPrice = 0m;
+            foreach(DataRow row in table.Rows)
+            {
+                totalPrice += (decimal)row.ItemArray[2];
+            }
+
+            return totalPrice;
+        }
     } 
 }
