@@ -6,6 +6,8 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Text;
 using System.Configuration;
+using System.IO;
+
 namespace ShopProject
 {
     public class DatabaseAccountAuthentication
@@ -92,6 +94,27 @@ namespace ShopProject
             adapter.Fill(dt);
             conn.Close();
 
+            addImagePath(ref dt);
+
+            return dt;
+        }
+        public static DataTable getItemById(int id) //pass list of strings that match the names in the db
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlConnection conn = new SqlConnection(ConnectionString);
+            conn.Open();
+            var command = new StringBuilder("Select * from Items WHERE id = @id;");
+            SqlCommand select = new SqlCommand();
+            select.Parameters.AddWithValue("@id", id);
+            select.CommandText = command.ToString();
+            select.Connection = conn;
+            adapter.SelectCommand = select;
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            conn.Close();
+
+            addImagePath(ref dt);
+
             return dt;
         }
         public static DataTable getAllItems()
@@ -106,6 +129,8 @@ namespace ShopProject
             adapter.Fill(dt);
             conn.Close();
 
+            addImagePath(ref dt);
+
             return dt;
         }
         public static decimal calculatePrice(DataTable table)
@@ -117,6 +142,13 @@ namespace ShopProject
             }
 
             return totalPrice;
+        }
+
+        private static void addImagePath(ref DataTable dt)
+        {
+            dt.Columns.Add("ImagePath");
+            foreach (DataRow dr in dt.Rows)
+                dr["ImagePath"] = "ART\\" + dr["name"] + ".jpg";
         }
     } 
 }

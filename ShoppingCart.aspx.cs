@@ -18,9 +18,22 @@ namespace ShopProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            CartContents = DatabasePullItems.getAllItems();
-            //CartContents = Session["CartContents"] as DataTable;
-            GridView1.DataSource = new DataView(CartContents);
+            if (!Page.IsPostBack)
+            {
+                //CartContents = DatabasePullItems.getAllItems();
+                CartContents = Session["ShoppingCart"] as DataTable;
+                if (CartContents != null)
+                {
+                    GridView1.DataSource = new DataView(CartContents);
+                    GridView1.DataBind();
+                }
+            }
+        }
+
+        protected void ClearCart_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            CartContents = null;
             GridView1.DataBind();
         }
     }
