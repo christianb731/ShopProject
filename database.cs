@@ -108,7 +108,7 @@ namespace ShopProject
 
             return dt;
         }
-        public decimal calculatePrice(DataTable table)
+        public static decimal calculatePrice(DataTable table)
         {
             decimal totalPrice = 0m;
             foreach(DataRow row in table.Rows)
