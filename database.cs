@@ -28,8 +28,6 @@ namespace ShopProject
             select.Parameters.AddWithValue("@user", Username);
             adapter.SelectCommand = select;
             conn.Open();
-
-            Random rand = new Random();
             SqlCommand update = new SqlCommand("Insert into Customer (Username, Password) VALUES (@user, @pass);");
             update.Parameters.AddWithValue("@user", Username);
             update.Parameters.AddWithValue("@pass", Password);
@@ -66,6 +64,17 @@ namespace ShopProject
                 return true;
             }
             return false;
+        }
+        public static void submitOrder(decimal orderTotal)
+        {
+            SqlConnection conn = new SqlConnection(ConnectionString);
+            conn.Open();
+
+            SqlCommand update = new SqlCommand("Insert into Orders (OrderAmount) VALUES (@total);");
+            update.Parameters.AddWithValue("@total", orderTotal);
+            update.Connection = conn;
+            update.ExecuteNonQuery();
+            conn.Close();
         }
     }
     public class DatabasePullItems 
