@@ -83,7 +83,6 @@
     <Content Include="checkout.aspx" />
     <Content Include="DBShop.mdf" />
     <Content Include="Gallery.aspx" />
-    <Content Include="hd.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="table.aspx" />
     <Content Include="Web.config" />
@@ -112,13 +111,6 @@
     </Compile>
     <Compile Include="Gallery.aspx.designer.cs">
       <DependentUpon>Gallery.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="hd.aspx.cs">
-      <DependentUpon>hd.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="hd.aspx.designer.cs">
-      <DependentUpon>hd.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

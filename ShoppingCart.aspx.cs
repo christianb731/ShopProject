@@ -24,8 +24,55 @@ namespace ShopProject
                 CartContents = Session["ShoppingCart"] as DataTable;
                 if (CartContents != null)
                 {
-                    GridView1.DataSource = new DataView(CartContents);
+
+
+                    ///int i = 0;
+                    ///var item = DatabasePullItems.getItemById(Int32.Parse(productId));
+                    ///
+                    DataTable dt = new DataTable();
+                    dt.Columns.AddRange(new DataColumn[3] {
+                    new DataColumn("Name", typeof(string)),
+                    new DataColumn("Price",typeof(Double)),
+                    new DataColumn("Quantity",typeof(Int32))
+                    });
+
+                    Dictionary<string, int>cartmap = new Dictionary<string, int> ();
+                    foreach (DataRow row in CartContents.Rows)
+                    {
+                        var key = row[1].ToString();
+                        if (cartmap.ContainsKey(key))
+                        {
+                            cartmap[key] = cartmap[key] + 1;
+                        }
+                        else
+                        {
+                            cartmap.Add(key, 1);
+
+                        }
+
+                    }
+                    double total = 0;
+                    foreach (DataRow row in CartContents.Rows)
+                    {
+                        var key = row[1].ToString();
+
+                        if (cartmap.ContainsKey(key))
+                        {
+                            dt.Rows.Add(row[1], row[2], cartmap[key]);
+                            total += double.Parse((string)row[2])*cartmap[key];
+                            cartmap.Remove(key);
+                        }
+                    }
+
+
+
+
+                    GridView1.DataSource = new DataView(dt); //CartContents
+
                     GridView1.DataBind();
+                    TotalLabel.Text = "Total Spent: $" + total;
+
+
                 }
             }
         }

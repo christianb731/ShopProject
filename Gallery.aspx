@@ -26,22 +26,29 @@
         }
 
         .description {
-            font-size: X-Small;
+            font-size: Small;
+            font-weight: bold;
+        }
+        .auto-style1 {
+            margin-left: 1320px;
         }
     </style>
 
-    <asp:Button ID="ClearCart" runat="server" Text="Clear Cart" OnClick="ClearCart_Click" BackColor="Red" />
+    <asp:Button ID="ClearCart" runat="server" Text="Clear Cart" OnClick="ClearCart_Click" BackColor="Red" CssClass="auto-style1" Height="29px" Width="109px" />
 
-    <asp:GridView ID="productsGridView" runat="server" AutoGenerateColumns="false">
+    <asp:GridView ID="productsGridView" runat="server" AutoGenerateColumns="false" HorizontalAlign="Center">
         <Columns>
             <asp:TemplateField>
                 <ItemTemplate>
                     <div class="row">
                         <div class="column">
                             <asp:Image runat="server" ID="test" BorderColor="Black" BorderStyle="Solid" ImageUrl='<%# Bind("ImagePath") %>' Style="margin-left: 0px" CssClass="image" />
+                                                        </br>
                             <asp:Label ID="LabelName1" runat="server" Text='<%# Bind("name") %>' CssClass="description"></asp:Label>
                             <asp:Label ID="Price" runat="server" Text='<%# Bind("Price") %>' CssClass="description"></asp:Label>
-                            <asp:Button ID="AddToCart" runat="server" Text="Add to Cart" OnClick="AddToCart_Click" CommandArgument='<%# Eval("Id") %>' BackColor="Green" />
+                            </br>
+                                                        </br>
+                            <asp:Button ID="AddToCart" runat="server" Text="Add to Cart" OnClick="AddToCart_Click" CommandArgument='<%# Eval("Id") %>' BackColor="Green" HorizontalAlign="Center" />
                         </div>
                     </div>
                 </ItemTemplate>
