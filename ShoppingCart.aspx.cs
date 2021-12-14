@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using static ShopProject.DatabaseAccountAuthentication;
 namespace ShopProject
 {
     public partial class ShoppingCart : System.Web.UI.Page
@@ -82,6 +82,26 @@ namespace ShopProject
             Session.Abandon();
             CartContents = null;
             GridView1.DataBind();
+            TotalLabel.Text = "Total Spent: $";
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string total = TotalLabel.Text.Substring(14);
+                decimal newTotal = decimal.Parse(total);
+                submitOrder(newTotal);
+                Session.Abandon();
+                CartContents = null;
+                GridView1.DataBind();
+                TotalLabel.Text = "Total Spent: $";
+            }
+            catch (Exception)
+            {
+                
+            }
+            
         }
     }
 }

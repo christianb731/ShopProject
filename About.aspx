@@ -10,8 +10,8 @@
     <h3 style="width: 793px; margin-left: 492px">
     &nbsp;We are a group of students passionate for artwork. Art can express our imaginations, emotions and expressions. Artwork is like a picture but it&#39;s made by people using a canvas and a picture is taken by a camera. We want to bring well known art from all over the world for everyone to enjoy. Everyone deserves to view such beautiful art. You can give the artwork to friends and family as gifts. You may hang it up on your wall. We currently have a limited amount of artwork to offer but we hope to bring more artwork available in the coming months.</h3>
     <p>
-        <asp:Image ID="Image7" runat="server" Height="344px" ImageUrl="~/ART/StarryNight.jpg" style="margin-left: 110px" Width="445px" />
-        <asp:Image ID="Image8" runat="server" Height="336px" ImageUrl="~/ART/intimate.jpg" style="margin-left: 686px" Width="369px" />
+        <asp:Image ID="Image7" runat="server" Height="344px" ImageUrl="~/ART/Starry%20Night.jpg" style="margin-left: 110px" Width="445px" />
+        <asp:Image ID="Image8" runat="server" Height="336px" ImageUrl="~/ART/Picasso%20Femme.jpg" style="margin-left: 686px" Width="369px" />
     </p>
     <p>
         &nbsp;</p>

@@ -21,7 +21,7 @@
   <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="true" Height="146px" HorizontalAlign="Center" Width="466px" />
     <asp:Button ID="ClearCart" runat="server" Text="Clear Cart" OnClick="ClearCart_Click" BackColor="Red" CssClass="auto-style1" Height="27px" Width="91px" />
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="Button1" runat="server" BackColor="#33CC33" Text="Confirm Purchase" />
+    <asp:Button ID="Button1" runat="server" BackColor="#33CC33" Text="Confirm Purchase" OnClick="Button1_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Label ID="TotalLabel" runat="server" HorizontalAlign="Center" Text ="Total Spent: " BackColor="#99CCFF"></asp:Label>
 </asp:Content>

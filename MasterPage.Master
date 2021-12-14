@@ -39,9 +39,8 @@ li a:hover:not(.active) {
 </head>
 <body>
   <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
+  <li><a href="Gallery.aspx">Home</a></li>
+  <li><a href="About.aspx">About Us</a></li>
   <li style="float:right"><a class="" href="/ShoppingCart.aspx">Shopping Cart</a></li>
 </ul>
 
